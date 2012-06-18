@@ -8,3 +8,6 @@ Demo limitations:
  - runs only on a real physical device, not simulator
 
 For more information: http://bit.ly/NpJ0jf
+
+Screenshot:
+<img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot.png" />
