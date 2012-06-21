@@ -10,6 +10,11 @@
 #import "PPViewController.h"
 #import "PPPepperViewController.h"
 
+//Non-functional in free-to-try version
+#import "MyBookOrPageView.h"
+#import "MyPageViewDetail.h"
+#import "MyImageCache.h"
+
 @interface PPViewController () <PPScrollListViewControllerDelegate>
 @property (nonatomic, strong) IBOutlet UIView * menuView;
 @property (nonatomic, strong) IBOutlet UIView * speedView;
@@ -55,6 +60,9 @@
   //Bring our top level menu to highest z-index
   [self.view bringSubviewToFront:self.menuView];
   [self.view bringSubviewToFront:self.speedView];
+  
+  //Initialize data
+  [self initializeBookData];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -134,9 +142,26 @@
   self.pepperViewController.scaleOnDeviceRotation = self.switchScaleOnDeviceRotation.on;
 }
 
+/*
+ * Switch between text/image demo
+ * Not functional in free-to-try version
+ */
+/*
+- (IBAction)onContentChange:(id)sender
+{
+  int idx = self.contentSegmented.selectedSegmentIndex;
+  if (idx == 0) {
+    self.pepperViewController.dataSource = self.pepperViewController;
+  }
+  else {
+    self.pepperViewController.dataSource = self;
+  }
+  [[MyImageCache sharedCached] removeAll];
+  [self.pepperViewController reload];
+}
+*/
 
 
-#pragma mark -
 #pragma mark - PPScrollListViewControllerDelegate
 
 /*
@@ -270,5 +295,118 @@
 {
   NSLog(@"%@", [NSString stringWithFormat:@"didEndZoomingWithPageIndex:%d zoomScale:%.2f", pageIndex, zoomScale]);
 }
+
+
+#pragma mark - Non-functional in free-to-try version
+
+#pragma mark Data model
+
+- (void)initializeBookData
+{
+  //You can supply your own data model
+  //For demo purpose, a very basic Book & Page model is supplied
+  //and they are being initialized with random data here
+  
+  //Dummy image list. Use with permission from Flickr user
+  NSArray *imageArray = [NSArray arrayWithObjects:
+                         @"http://farm5.staticflickr.com/4013/4403864606_1ef5903b40_b.jpg",
+                         @"http://farm3.staticflickr.com/2772/4409418974_df2bc0e6a8_b.jpg",
+                         @"http://farm5.staticflickr.com/4043/4411334362_652660cd36_b.jpg",
+                         @"http://farm3.staticflickr.com/2787/4410850119_0088b812b6_b.jpg",
+                         @"http://farm5.staticflickr.com/4013/4413884482_cd8b7f29fb_b.jpg",
+                         @"http://farm8.staticflickr.com/7217/7188226254_809e5b218b_b.jpg",
+                         @"http://farm5.staticflickr.com/4030/4411581280_8ef29563d8_z.jpg?zz=1",
+                         @"http://farm8.staticflickr.com/7223/7188230154_13db066420_b.jpg",
+                         nil];
+  int imageCount = imageArray.count;
+  
+  int randomBookID = arc4random() % 123456;
+  int randomPageID = arc4random() % 123456;
+  
+  self.bookDataArray = [[NSMutableArray alloc] init];
+  for (int i=0; i<DEMO_NUM_BOOKS; i++) {
+    Book *myBook = [[Book alloc] init];
+    myBook.bookID = randomBookID;
+    myBook.pages = [[NSMutableArray alloc] init];
+    randomBookID += arc4random() % 123456;
+    
+    int randomNumPages = DEMO_NUM_PAGES;
+    for (int j=0; j<randomNumPages; j++) {
+      Page *myPage = [[Page alloc] init];
+      myPage.pageID = randomPageID;
+      myPage.halfsizeURL = [imageArray objectAtIndex:(i+j) % imageCount];
+      myPage.fullsizeURL = myPage.halfsizeURL;
+      randomPageID += arc4random() % 123456;
+      
+      [myBook.pages addObject:myPage];
+    }
+    
+    [self.bookDataArray addObject:myBook];
+  }
+  
+  //Not needed in free-to-try version
+  //[self.pepperViewController reload];
+}
+
+#pragma mark PPScrollListViewControllerDataSource
+
+- (int)ppPepperViewController:(PPPepperViewController*)scrollList numberOfBooks:(int)dummy;
+{
+  return self.bookDataArray.count;
+}
+
+- (int)ppPepperViewController:(PPPepperViewController*)scrollList numberOfPagesForBookIndex:(int)bookIndex
+{
+  if (bookIndex < 0 || bookIndex >= self.bookDataArray.count)
+    return 0;
+  Book *theBook = [self.bookDataArray objectAtIndex:bookIndex];
+  return theBook.pages.count;
+}
+
+- (UIView*)ppPepperViewController:(PPPepperViewController*)scrollList viewForBookIndex:(int)bookIndex withFrame:(CGRect)frame reusableView:(UIView*)contentView
+{
+  Book *theBook = [self.bookDataArray objectAtIndex:bookIndex];
+  
+  MyBookOrPageView *view = nil;
+  if (contentView == nil || ![contentView isKindOfClass:[MyBookOrPageView class]])
+    view = [[MyBookOrPageView alloc] initWithFrame:frame];
+  else
+    view = (MyBookOrPageView*)contentView;
+  
+  [view configureWithBookModel:theBook];
+  return view;
+}
+
+- (UIView*)ppPepperViewController:(PPPepperViewController*)scrollList thumbnailViewForPageIndex:(int)pageIndex inBookIndex:(int)bookIndex withFrame:(CGRect)frame reusableView:(UIView*)contentView
+{
+  Book *theBook = [self.bookDataArray objectAtIndex:bookIndex];
+  Page *thePage = [theBook.pages objectAtIndex:pageIndex];
+  
+  MyBookOrPageView *view = nil;
+  if (contentView == nil || ![contentView isKindOfClass:[MyBookOrPageView class]])
+    view = [[MyBookOrPageView alloc] initWithFrame:frame];
+  else
+    view = (MyBookOrPageView*)contentView;
+  
+  [view configureWithPageModel:thePage];
+  return view;
+}
+
+- (UIView*)ppPepperViewController:(PPPepperViewController*)scrollList detailViewForPageIndex:(int)pageIndex inBookIndex:(int)bookIndex withFrame:(CGRect)frame reusableView:(UIView*)contentView
+{
+  Book *theBook = [self.bookDataArray objectAtIndex:bookIndex];
+  Page *thePage = [theBook.pages objectAtIndex:pageIndex];
+  
+  MyPageViewDetail *view = nil;
+  if (contentView == nil || ![contentView isKindOfClass:[MyPageViewDetail class]])
+    view = [[MyPageViewDetail alloc] initWithFrame:frame];
+  else
+    view = (MyPageViewDetail*)contentView;
+  
+  [view configureWithPageModel:thePage];
+  return view;
+}
+
+
 
 @end

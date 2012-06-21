@@ -19,6 +19,12 @@
 		42523BE6157934BF000323EE /* page_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42523BDE157934BF000323EE /* page_bg.png */; };
 		42523BEC157934EB000323EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42523BEB157934EA000323EE /* QuartzCore.framework */; };
 		4276D0F8157A8F5F00C27FFB /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4276D0F7157A8F5F00C27FFB /* PPViewController.m */; };
+		428FAA031592D990009942A2 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FA9F71592D990009942A2 /* Book.m */; };
+		428FAA041592D990009942A2 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FA9F91592D990009942A2 /* Page.m */; };
+		428FAA051592D990009942A2 /* MyBookOrPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FA9FC1592D990009942A2 /* MyBookOrPageView.m */; };
+		428FAA061592D990009942A2 /* MyImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FA9FE1592D990009942A2 /* MyImageCache.m */; };
+		428FAA071592D990009942A2 /* MyPageBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FAA001592D990009942A2 /* MyPageBaseView.m */; };
+		428FAA081592D990009942A2 /* MyPageViewDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FAA021592D990009942A2 /* MyPageViewDetail.m */; };
 		42AB47BD157B77B50001AE94 /* book_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AB47BC157B77B50001AE94 /* book_bg.png */; };
 		42ED4C90158FA7AA0055BAE7 /* libPepperUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED4C8F158FA7AA0055BAE7 /* libPepperUI.a */; };
 /* End PBXBuildFile section */
@@ -42,6 +48,19 @@
 		42523BEB157934EA000323EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4276D0F6157A8F5F00C27FFB /* PPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
 		4276D0F7157A8F5F00C27FFB /* PPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPViewController.m; sourceTree = "<group>"; };
+		428FA9F61592D990009942A2 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		428FA9F71592D990009942A2 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		428FA9F81592D990009942A2 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		428FA9F91592D990009942A2 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
+		428FA9FB1592D990009942A2 /* MyBookOrPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBookOrPageView.h; sourceTree = "<group>"; };
+		428FA9FC1592D990009942A2 /* MyBookOrPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBookOrPageView.m; sourceTree = "<group>"; };
+		428FA9FD1592D990009942A2 /* MyImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyImageCache.h; sourceTree = "<group>"; };
+		428FA9FE1592D990009942A2 /* MyImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyImageCache.m; sourceTree = "<group>"; };
+		428FA9FF1592D990009942A2 /* MyPageBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageBaseView.h; sourceTree = "<group>"; };
+		428FAA001592D990009942A2 /* MyPageBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageBaseView.m; sourceTree = "<group>"; };
+		428FAA011592D990009942A2 /* MyPageViewDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageViewDetail.h; sourceTree = "<group>"; };
+		428FAA021592D990009942A2 /* MyPageViewDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageViewDetail.m; sourceTree = "<group>"; };
+		428FAA0F1592DE80009942A2 /* PPPepperContants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPepperContants.h; sourceTree = "<group>"; };
 		42AB47BC157B77B50001AE94 /* book_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_bg.png; sourceTree = "<group>"; };
 		42ED4C8F158FA7AA0055BAE7 /* libPepperUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPepperUI.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +115,8 @@
 		42523BC615793492000323EE /* PepperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				428FA9F51592D990009942A2 /* Models */,
+				428FA9FA1592D990009942A2 /* Views */,
 				4276D0F5157A8F5F00C27FFB /* Controllers */,
 				42523BD515793492000323EE /* PPViewController.xib */,
 				42523BC715793492000323EE /* Supporting Files */,
@@ -123,6 +144,7 @@
 				42366DAA157FDB0C00BC7061 /* page_bg@2x.png */,
 				42523BDE157934BF000323EE /* page_bg.png */,
 				42523BE4157934BF000323EE /* PPPepperViewController.h */,
+				428FAA0F1592DE80009942A2 /* PPPepperContants.h */,
 			);
 			path = Pepper;
 			sourceTree = "<group>";
@@ -134,6 +156,32 @@
 				4276D0F7157A8F5F00C27FFB /* PPViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		428FA9F51592D990009942A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				428FA9F61592D990009942A2 /* Book.h */,
+				428FA9F71592D990009942A2 /* Book.m */,
+				428FA9F81592D990009942A2 /* Page.h */,
+				428FA9F91592D990009942A2 /* Page.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		428FA9FA1592D990009942A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				428FA9FB1592D990009942A2 /* MyBookOrPageView.h */,
+				428FA9FC1592D990009942A2 /* MyBookOrPageView.m */,
+				428FA9FD1592D990009942A2 /* MyImageCache.h */,
+				428FA9FE1592D990009942A2 /* MyImageCache.m */,
+				428FA9FF1592D990009942A2 /* MyPageBaseView.h */,
+				428FAA001592D990009942A2 /* MyPageBaseView.m */,
+				428FAA011592D990009942A2 /* MyPageViewDetail.h */,
+				428FAA021592D990009942A2 /* MyPageViewDetail.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +255,12 @@
 				42523BCD15793492000323EE /* main.m in Sources */,
 				42523BD115793492000323EE /* PPAppDelegate.m in Sources */,
 				4276D0F8157A8F5F00C27FFB /* PPViewController.m in Sources */,
+				428FAA031592D990009942A2 /* Book.m in Sources */,
+				428FAA041592D990009942A2 /* Page.m in Sources */,
+				428FAA051592D990009942A2 /* MyBookOrPageView.m in Sources */,
+				428FAA061592D990009942A2 /* MyImageCache.m in Sources */,
+				428FAA071592D990009942A2 /* MyPageBaseView.m in Sources */,
+				428FAA081592D990009942A2 /* MyPageViewDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
