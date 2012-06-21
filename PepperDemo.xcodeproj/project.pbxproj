@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		42366DAB157FDB0C00BC7061 /* page_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42366DAA157FDB0C00BC7061 /* page_bg@2x.png */; };
 		423941E4157D494C0053E0FA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 423941E3157D494C0053E0FA /* Icon-72.png */; };
 		423941E7157D494F0053E0FA /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 423941E6157D494F0053E0FA /* Icon-144.png */; };
 		42523BC115793492000323EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42523BC015793492000323EE /* UIKit.framework */; };
@@ -16,7 +15,6 @@
 		42523BCD15793492000323EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42523BCC15793492000323EE /* main.m */; };
 		42523BD115793492000323EE /* PPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42523BD015793492000323EE /* PPAppDelegate.m */; };
 		42523BD715793492000323EE /* PPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42523BD515793492000323EE /* PPViewController.xib */; };
-		42523BE6157934BF000323EE /* page_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42523BDE157934BF000323EE /* page_bg.png */; };
 		42523BEC157934EB000323EE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42523BEB157934EA000323EE /* QuartzCore.framework */; };
 		4276D0F8157A8F5F00C27FFB /* PPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4276D0F7157A8F5F00C27FFB /* PPViewController.m */; };
 		428FAA031592D990009942A2 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FA9F71592D990009942A2 /* Book.m */; };
@@ -26,11 +24,19 @@
 		428FAA071592D990009942A2 /* MyPageBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FAA001592D990009942A2 /* MyPageBaseView.m */; };
 		428FAA081592D990009942A2 /* MyPageViewDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FAA021592D990009942A2 /* MyPageViewDetail.m */; };
 		42AB47BD157B77B50001AE94 /* book_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AB47BC157B77B50001AE94 /* book_bg.png */; };
+		42B639D515938D5100B42A2D /* page_bg_borderless.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639CD15938D5100B42A2D /* page_bg_borderless.png */; };
+		42B639D615938D5100B42A2D /* page_bg_borderless@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639CE15938D5100B42A2D /* page_bg_borderless@2x.png */; };
+		42B639D715938D5100B42A2D /* page_bg_borderless@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639CF15938D5100B42A2D /* page_bg_borderless@2x~ipad.png */; };
+		42B639D815938D5100B42A2D /* page_bg_borderless~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D015938D5100B42A2D /* page_bg_borderless~ipad.png */; };
+		42B639D915938D5100B42A2D /* page_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D115938D5100B42A2D /* page_bg.png */; };
+		42B639DA15938D5100B42A2D /* page_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D215938D5100B42A2D /* page_bg@2x.png */; };
+		42B639DB15938D5100B42A2D /* page_bg@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */; };
+		42B639DC15938D5100B42A2D /* page_bg~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D415938D5100B42A2D /* page_bg~ipad.png */; };
+		42B639E215938E5900B42A2D /* PPViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B639E015938E5900B42A2D /* PPViewController~iphone.xib */; };
 		42ED4C90158FA7AA0055BAE7 /* libPepperUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED4C8F158FA7AA0055BAE7 /* libPepperUI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		42366DAA157FDB0C00BC7061 /* page_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg@2x.png"; sourceTree = "<group>"; };
 		423941E3157D494C0053E0FA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		423941E6157D494F0053E0FA /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
 		42523BBC15793492000323EE /* PepperDemoFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PepperDemoFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,7 +49,6 @@
 		42523BCF15793492000323EE /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
 		42523BD015793492000323EE /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
 		42523BD615793492000323EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PPViewController.xib; sourceTree = "<group>"; };
-		42523BDE157934BF000323EE /* page_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_bg.png; sourceTree = "<group>"; };
 		42523BE4157934BF000323EE /* PPPepperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PPPepperViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		42523BEB157934EA000323EE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4276D0F6157A8F5F00C27FFB /* PPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPViewController.h; sourceTree = "<group>"; };
@@ -62,6 +67,15 @@
 		428FAA021592D990009942A2 /* MyPageViewDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageViewDetail.m; sourceTree = "<group>"; };
 		428FAA0F1592DE80009942A2 /* PPPepperContants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPepperContants.h; sourceTree = "<group>"; };
 		42AB47BC157B77B50001AE94 /* book_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_bg.png; sourceTree = "<group>"; };
+		42B639CD15938D5100B42A2D /* page_bg_borderless.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_bg_borderless.png; sourceTree = "<group>"; };
+		42B639CE15938D5100B42A2D /* page_bg_borderless@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg_borderless@2x.png"; sourceTree = "<group>"; };
+		42B639CF15938D5100B42A2D /* page_bg_borderless@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg_borderless@2x~ipad.png"; sourceTree = "<group>"; };
+		42B639D015938D5100B42A2D /* page_bg_borderless~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg_borderless~ipad.png"; sourceTree = "<group>"; };
+		42B639D115938D5100B42A2D /* page_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_bg.png; sourceTree = "<group>"; };
+		42B639D215938D5100B42A2D /* page_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg@2x.png"; sourceTree = "<group>"; };
+		42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg@2x~ipad.png"; sourceTree = "<group>"; };
+		42B639D415938D5100B42A2D /* page_bg~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg~ipad.png"; sourceTree = "<group>"; };
+		42B639E115938E5900B42A2D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/PPViewController~iphone.xib"; sourceTree = "<group>"; };
 		42ED4C8F158FA7AA0055BAE7 /* libPepperUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPepperUI.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +133,7 @@
 				428FA9FA1592D990009942A2 /* Views */,
 				4276D0F5157A8F5F00C27FFB /* Controllers */,
 				42523BD515793492000323EE /* PPViewController.xib */,
+				42B639E015938E5900B42A2D /* PPViewController~iphone.xib */,
 				42523BC715793492000323EE /* Supporting Files */,
 			);
 			path = PepperDemo;
@@ -141,8 +156,14 @@
 			children = (
 				42ED4C8F158FA7AA0055BAE7 /* libPepperUI.a */,
 				42AB47BC157B77B50001AE94 /* book_bg.png */,
-				42366DAA157FDB0C00BC7061 /* page_bg@2x.png */,
-				42523BDE157934BF000323EE /* page_bg.png */,
+				42B639CD15938D5100B42A2D /* page_bg_borderless.png */,
+				42B639CE15938D5100B42A2D /* page_bg_borderless@2x.png */,
+				42B639CF15938D5100B42A2D /* page_bg_borderless@2x~ipad.png */,
+				42B639D015938D5100B42A2D /* page_bg_borderless~ipad.png */,
+				42B639D115938D5100B42A2D /* page_bg.png */,
+				42B639D215938D5100B42A2D /* page_bg@2x.png */,
+				42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */,
+				42B639D415938D5100B42A2D /* page_bg~ipad.png */,
 				42523BE4157934BF000323EE /* PPPepperViewController.h */,
 				428FAA0F1592DE80009942A2 /* PPPepperContants.h */,
 			);
@@ -237,11 +258,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				42523BD715793492000323EE /* PPViewController.xib in Resources */,
-				42523BE6157934BF000323EE /* page_bg.png in Resources */,
 				42AB47BD157B77B50001AE94 /* book_bg.png in Resources */,
 				423941E4157D494C0053E0FA /* Icon-72.png in Resources */,
 				423941E7157D494F0053E0FA /* Icon-144.png in Resources */,
-				42366DAB157FDB0C00BC7061 /* page_bg@2x.png in Resources */,
+				42B639D515938D5100B42A2D /* page_bg_borderless.png in Resources */,
+				42B639D615938D5100B42A2D /* page_bg_borderless@2x.png in Resources */,
+				42B639D715938D5100B42A2D /* page_bg_borderless@2x~ipad.png in Resources */,
+				42B639D815938D5100B42A2D /* page_bg_borderless~ipad.png in Resources */,
+				42B639D915938D5100B42A2D /* page_bg.png in Resources */,
+				42B639DA15938D5100B42A2D /* page_bg@2x.png in Resources */,
+				42B639DB15938D5100B42A2D /* page_bg@2x~ipad.png in Resources */,
+				42B639DC15938D5100B42A2D /* page_bg~ipad.png in Resources */,
+				42B639E215938E5900B42A2D /* PPViewController~iphone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +301,14 @@
 				42523BD615793492000323EE /* en */,
 			);
 			name = PPViewController.xib;
+			sourceTree = "<group>";
+		};
+		42B639E015938E5900B42A2D /* PPViewController~iphone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42B639E115938E5900B42A2D /* en */,
+			);
+			name = "PPViewController~iphone.xib";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -339,7 +375,7 @@
 				);
 				PRODUCT_NAME = PepperDemoFree;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -358,7 +394,7 @@
 				);
 				PRODUCT_NAME = PepperDemoFree;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
