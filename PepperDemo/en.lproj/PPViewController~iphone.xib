@@ -327,7 +327,6 @@
 								<string key="NSFrame">{{5, 30}, {140, 40}}</string>
 								<reference key="NSSuperview" ref="270952259"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -4824,6 +4823,14 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<int key="connectionID">28</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lblVersion</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="713775814"/>
+					</object>
+					<int key="connectionID">44</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">onSwitchRandomPage:</string>
 						<reference key="source" ref="36991633"/>
@@ -4987,7 +4994,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">43</int>
+			<int key="maxID">44</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4997,9 +5004,12 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="contentSegmented">UISegmentedControl</string>
 						<string key="lblSpeed">UILabel</string>
+						<string key="lblVersion">UILabel</string>
 						<string key="menuView">UIView</string>
 						<string key="speedSegmented">UISegmentedControl</string>
 						<string key="speedView">UIView</string>
+						<string key="switchBorderlessGraphic">UISwitch</string>
+						<string key="switchOneSideZoom">UISwitch</string>
 						<string key="switchRandomPage">UISwitch</string>
 						<string key="switchScaleOnDeviceRotation">UISwitch</string>
 					</dictionary>
@@ -5010,6 +5020,10 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						</object>
 						<object class="IBToOneOutletInfo" key="lblSpeed">
 							<string key="name">lblSpeed</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="lblVersion">
+							<string key="name">lblVersion</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="menuView">
@@ -5023,6 +5037,14 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<object class="IBToOneOutletInfo" key="speedView">
 							<string key="name">speedView</string>
 							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="switchBorderlessGraphic">
+							<string key="name">switchBorderlessGraphic</string>
+							<string key="candidateClassName">UISwitch</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="switchOneSideZoom">
+							<string key="name">switchOneSideZoom</string>
+							<string key="candidateClassName">UISwitch</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="switchRandomPage">
 							<string key="name">switchRandomPage</string>

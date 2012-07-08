@@ -25,14 +25,14 @@
   {
     self.backgroundColor = [UIColor clearColor];
     
-    int margin = 10;
+    int margin = 16;
     CGRect imageFrame = CGRectMake(margin, margin+EDGE_PADDING, frame.size.width-2*margin, frame.size.height-2*EDGE_PADDING-2*margin);
     self.imageView = [[UIImageView alloc] initWithFrame:imageFrame];
     self.imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.imageView.backgroundColor = [UIColor clearColor];
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.clipsToBounds = YES;
-    self.imageView.layer.cornerRadius = margin;
+    //self.imageView.layer.cornerRadius = margin;
     self.imageView.layer.masksToBounds = YES;
     self.imageView.layer.shouldRasterize = YES;
     self.imageView.layer.rasterizationScale = [UIScreen mainScreen].scale;
@@ -44,7 +44,8 @@
     | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     self.loadingIndicator.contentMode = UIViewContentModeCenter;
     self.loadingIndicator.hidesWhenStopped = YES;
-    self.loadingIndicator.color = [UIColor orangeColor];
+    if ([self.loadingIndicator respondsToSelector:@selector(setColor:)])
+      self.loadingIndicator.color = [UIColor orangeColor];
     [self.loadingIndicator stopAnimating];
     [self.imageView addSubview:self.loadingIndicator];
   }
@@ -71,7 +72,6 @@
   UIImage *image = [[MyImageCache sharedCached] imageForKey:stringUrl];
   if (image != nil) {
     self.imageView.image = image;
-    self.imageView.backgroundColor = [UIColor greenColor];
     [self.loadingIndicator stopAnimating];
     [self.imageView setNeedsDisplay];
     return;

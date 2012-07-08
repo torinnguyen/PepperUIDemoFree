@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		423941E4157D494C0053E0FA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 423941E3157D494C0053E0FA /* Icon-72.png */; };
 		423941E7157D494F0053E0FA /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 423941E6157D494F0053E0FA /* Icon-144.png */; };
+		423E5CCE15A9C4D000D7AB34 /* page_bg_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 423E5CCD15A9C4D000D7AB34 /* page_bg_shadow.png */; };
 		42523BC115793492000323EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42523BC015793492000323EE /* UIKit.framework */; };
 		42523BC315793492000323EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42523BC215793492000323EE /* Foundation.framework */; };
 		42523BC515793492000323EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42523BC415793492000323EE /* CoreGraphics.framework */; };
@@ -33,12 +34,14 @@
 		42B639DB15938D5100B42A2D /* page_bg@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */; };
 		42B639DC15938D5100B42A2D /* page_bg~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D415938D5100B42A2D /* page_bg~ipad.png */; };
 		42B639E215938E5900B42A2D /* PPViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B639E015938E5900B42A2D /* PPViewController~iphone.xib */; };
-		42ED4C90158FA7AA0055BAE7 /* libPepperUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42ED4C8F158FA7AA0055BAE7 /* libPepperUI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		423941E3157D494C0053E0FA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		423941E6157D494F0053E0FA /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
+		423E5CCD15A9C4D000D7AB34 /* page_bg_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_bg_shadow.png; sourceTree = "<group>"; };
+		423E5CD315A9C5B200D7AB34 /* PPPageViewContentWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPageViewContentWrapper.h; sourceTree = "<group>"; };
+		423E5CD415A9C5B200D7AB34 /* PPPageViewDetailWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPageViewDetailWrapper.h; sourceTree = "<group>"; };
 		42523BBC15793492000323EE /* PepperDemoFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PepperDemoFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42523BC015793492000323EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42523BC215793492000323EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,7 +79,6 @@
 		42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg@2x~ipad.png"; sourceTree = "<group>"; };
 		42B639D415938D5100B42A2D /* page_bg~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg~ipad.png"; sourceTree = "<group>"; };
 		42B639E115938E5900B42A2D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/PPViewController~iphone.xib"; sourceTree = "<group>"; };
-		42ED4C8F158FA7AA0055BAE7 /* libPepperUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPepperUI.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,6 @@
 				42523BC115793492000323EE /* UIKit.framework in Frameworks */,
 				42523BC315793492000323EE /* Foundation.framework in Frameworks */,
 				42523BC515793492000323EE /* CoreGraphics.framework in Frameworks */,
-				42ED4C90158FA7AA0055BAE7 /* libPepperUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +155,8 @@
 		42523BDD157934BF000323EE /* Pepper */ = {
 			isa = PBXGroup;
 			children = (
-				42ED4C8F158FA7AA0055BAE7 /* libPepperUI.a */,
 				42AB47BC157B77B50001AE94 /* book_bg.png */,
+				423E5CCD15A9C4D000D7AB34 /* page_bg_shadow.png */,
 				42B639CD15938D5100B42A2D /* page_bg_borderless.png */,
 				42B639CE15938D5100B42A2D /* page_bg_borderless@2x.png */,
 				42B639CF15938D5100B42A2D /* page_bg_borderless@2x~ipad.png */,
@@ -164,6 +165,8 @@
 				42B639D215938D5100B42A2D /* page_bg@2x.png */,
 				42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */,
 				42B639D415938D5100B42A2D /* page_bg~ipad.png */,
+				423E5CD315A9C5B200D7AB34 /* PPPageViewContentWrapper.h */,
+				423E5CD415A9C5B200D7AB34 /* PPPageViewDetailWrapper.h */,
 				42523BE4157934BF000323EE /* PPPepperViewController.h */,
 				428FAA0F1592DE80009942A2 /* PPPepperContants.h */,
 			);
@@ -270,6 +273,7 @@
 				42B639DB15938D5100B42A2D /* page_bg@2x~ipad.png in Resources */,
 				42B639DC15938D5100B42A2D /* page_bg~ipad.png in Resources */,
 				42B639E215938E5900B42A2D /* PPViewController~iphone.xib in Resources */,
+				423E5CCE15A9C4D000D7AB34 /* page_bg_shadow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +377,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Pepper\"",
 				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = "\"$(SRCROOT)/Pepper/Debug-iphoneos/libPepperUI.a\"";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/Pepper/Debug-iphonesimulator/libPepperUI.a\"";
 				PRODUCT_NAME = PepperDemoFree;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,6 +398,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Pepper\"",
 				);
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = "\"$(SRCROOT)/Pepper/Debug-iphoneos/libPepperUI.a\"";
+				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/Pepper/Debug-iphonesimulator/libPepperUI.a\"";
 				PRODUCT_NAME = PepperDemoFree;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

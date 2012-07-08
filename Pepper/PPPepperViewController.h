@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPPageViewContentWrapper.h"
+#import "PPPageViewDetailWrapper.h"
 
 //For demo purpose
 #define DEMO_NUM_BOOKS               64
@@ -59,8 +61,8 @@
 
 /*
  * This is called when a book cover is tapped on
- * The book will open automatically by the library if AUTO_OPEN_BOOK is enabled (default)
- * Otherwise you need to call [pepperViewController openCurrentBookAtPageIndex:0]; yourself
+ * The book will open automatically if delegate does not implement this (default)
+ * If implemented you need to call [pepperViewController openCurrentBookAtPageIndex:0]; yourself
  */
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didTapOnBookIndex:(int)bookIndex;
 
@@ -78,8 +80,8 @@
 
 /*
  * This is called when a page is tapped on
- * The book will open automatically by the library if AUTO_OPEN_PAGE is enabled (default)
- * Otherwise you need to call [pepperViewController openPageIndex:xxx]; yourself
+ * The page will zoom to fullscreen mode automatically if delegate does not implement this (default)
+ * If implemented, you need to call [pepperViewController openPageIndex:xxx]; yourself
  */
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didTapOnPageIndex:(int)pageIndex;
 
@@ -108,6 +110,8 @@
  */
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didZoomWithPageIndex:(int)pageIndex zoomScale:(float)zoomScale;
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didEndZoomingWithPageIndex:(int)pageIndex zoomScale:(float)zoomScale;
+- (void)ppPepperViewController:(PPPepperViewController*)scrollList didOpenPageIndex:(int)pageIndex;
+- (void)ppPepperViewController:(PPPepperViewController*)scrollList didClosePageIndex:(int)pageIndex;
 
 @end
 
@@ -121,22 +125,24 @@
  PPScrollListViewControllerDelegate
 >
 
-// Delegate & datasource protocol
 @property (nonatomic, unsafe_unretained) id <PPScrollListViewControllerDelegate> delegate;
 
-// Not available in free-to-try static library
-//@property (nonatomic, unsafe_unretained) id <PPScrollListViewControllerDataSource> dataSource;
+//This cannot be changed in free-to-try version
+@property (nonatomic, unsafe_unretained) id <PPScrollListViewControllerDataSource> dataSource;
 
+// Configurable on-the-fly
 @property (nonatomic, assign) BOOL hideFirstPage;
+@property (nonatomic, assign) BOOL enableBorderlessGraphic;
 @property (nonatomic, assign) BOOL enableBookScale;
+@property (nonatomic, assign) BOOL enableBookShadow;
 @property (nonatomic, assign) BOOL enableBookRotate;
-@property (nonatomic, assign) BOOL oneSideZoom;             //experimental, don't touch this
+@property (nonatomic, assign) BOOL enableOneSideZoom;
+@property (nonatomic, assign) BOOL enableHighSpeedScrolling;
 @property (nonatomic, assign) BOOL scaleOnDeviceRotation;
 @property (nonatomic, assign) float animationSlowmoFactor;
-@property (nonatomic, assign) float pepperPageSpacing;
 
 // Read-only properties
-@property (nonatomic, readonly) float controlIndex;
+@property (nonatomic, assign) float controlIndex;
 @property (nonatomic, readonly) float controlAngle;
 @property (nonatomic, readonly) BOOL isBookView;
 @property (nonatomic, readonly) BOOL isDetailView;
@@ -144,14 +150,21 @@
 + (NSString*)version;
 
 - (void)reload;
+- (BOOL)isPepperView;
 
 // Book list
+- (int)getCurrentBookIndex;
 - (void)openCurrentBookAtPageIndex:(int)pageIndex;
+- (PPPageViewContentWrapper*)getBookViewAtIndex:(int)index;
 
 // Pepper list
 - (void)openPageIndex:(int)pageIndex;
+- (PPPageViewContentWrapper*)getPepperPageAtIndex:(int)index;
+- (void)animateControlIndexTo:(float)index duration:(float)duration;
 
 // Page list
+- (int)getCurrentPageIndex;
 - (void)scrollToPage:(int)pageIndex duration:(float)duration;
-  
+- (PPPageViewDetailWrapper*)getDetailViewAtIndex:(int)index;
+
 @end
