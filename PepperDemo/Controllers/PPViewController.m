@@ -86,7 +86,7 @@
   [super viewDidAppear:animated];
   [self.pepperViewController viewDidAppear:animated];
   
-  [self onContentChange:self.contentSegmented];
+  [self.pepperViewController reload];
 }
 
 - (void)viewDidUnload
