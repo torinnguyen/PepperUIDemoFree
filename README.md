@@ -11,7 +11,7 @@ For more information: http://torinnguyen.com/components/PepperUI
 iPad
 <img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-ipad.png" />
 
-<img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-bordereless.png" />
+<img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-borderless.png" />
 
 Options
 <img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-options.png" />
