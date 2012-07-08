@@ -29,7 +29,6 @@
 - (void)configureWithBookModel:(Book*)bookModel
 {
   self.theModel = bookModel;
-  self.imageView.image = nil;
   
   if (bookModel.coverURL != nil) {
     [self fetchImageWithUrl:bookModel.coverURL];
@@ -46,7 +45,7 @@
 - (void)configureWithPageModel:(Page*)pageModel
 {
   self.theModel = pageModel;
-  self.imageView.image = nil;
+  
   [self fetchImageWithUrl:pageModel.halfsizeURL];
 }
 

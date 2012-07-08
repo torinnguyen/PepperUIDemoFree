@@ -25,14 +25,14 @@
   {
     self.backgroundColor = [UIColor clearColor];
     
-    int margin = 16;
+    //We are given the entire frame including EDGE_PADDING space, so we need to compensate for it
+    int margin = 8;
     CGRect imageFrame = CGRectMake(margin, margin+EDGE_PADDING, frame.size.width-2*margin, frame.size.height-2*EDGE_PADDING-2*margin);
+    
     self.imageView = [[UIImageView alloc] initWithFrame:imageFrame];
     self.imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.imageView.backgroundColor = [UIColor clearColor];
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.clipsToBounds = YES;
-    //self.imageView.layer.cornerRadius = margin;
     self.imageView.layer.masksToBounds = YES;
     self.imageView.layer.shouldRasterize = YES;
     self.imageView.layer.rasterizationScale = [UIScreen mainScreen].scale;
@@ -42,12 +42,11 @@
     self.loadingIndicator.center = CGPointMake(CGRectGetMidX(self.imageView.bounds), CGRectGetMidY(self.imageView.bounds));
     self.loadingIndicator.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin
     | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-    self.loadingIndicator.contentMode = UIViewContentModeCenter;
     self.loadingIndicator.hidesWhenStopped = YES;
-    if ([self.loadingIndicator respondsToSelector:@selector(setColor:)])
+    if ([self.loadingIndicator respondsToSelector:@selector(setColor:)])    //iOS 5.0 and above
       self.loadingIndicator.color = [UIColor orangeColor];
     [self.loadingIndicator stopAnimating];
-    [self.imageView addSubview:self.loadingIndicator];
+    [self addSubview:self.loadingIndicator];
   }
   return self;
 }
@@ -64,6 +63,7 @@
   //Local image
   if (![stringUrl hasPrefix:@"http"]) {
     self.imageView.image = [UIImage imageNamed:stringUrl];
+    self.imageView.hidden = NO;
     [self.loadingIndicator stopAnimating];
     return;
   }
@@ -71,23 +71,25 @@
   //Has cache
   UIImage *image = [[MyImageCache sharedCached] imageForKey:stringUrl];
   if (image != nil) {
-    self.imageView.image = image;
     [self.loadingIndicator stopAnimating];
-    [self.imageView setNeedsDisplay];
+    self.imageView.image = image;
+    self.imageView.hidden = NO;
     return;
   }
   
+  self.imageView.hidden = YES;
   [self.loadingIndicator startAnimating];
   
   //Asynchronous loading using GCD
-  __block MyPageBaseView* _self = self;
+  __block MyPageBaseView* blockSafeSelf = self;
   dispatch_queue_t backgroundQueue = dispatch_queue_create("com.companyname.downloadqueue", NULL);
   dispatch_async(backgroundQueue, ^(void) {
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:stringUrl]]];
     
     dispatch_async(dispatch_get_main_queue(), ^(void) {
-      _self.imageView.image = image;
-      [_self.loadingIndicator stopAnimating];
+      [blockSafeSelf.loadingIndicator stopAnimating];
+      blockSafeSelf.imageView.image = image;
+      blockSafeSelf.imageView.hidden = NO;
       [[MyImageCache sharedCached] addImage:image ForKey:stringUrl];
     });
   });

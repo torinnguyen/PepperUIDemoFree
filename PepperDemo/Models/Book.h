@@ -1,3 +1,9 @@
+//
+// Book.h
+//
+// This is just a dummy data model for a Book for demo purpose
+// You should replace it with your own data model
+//
 
 #import <Foundation/Foundation.h>
 
