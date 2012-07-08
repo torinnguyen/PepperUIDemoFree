@@ -12,9 +12,12 @@ iPad
 <img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-ipad-portrait.png" />
 <img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-borderless.png" />
 
-iPhone (retina)
+iPhone
+
 <img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-iphone-landscape.png" />
+
 <img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-iphone-portrait.png" />
+
 <img src="https://github.com/torinnguyen/PepperUIDemoFree/raw/master/screenshot-iphone-zoom.png" />
 
 Options
