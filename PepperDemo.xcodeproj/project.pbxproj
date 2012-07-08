@@ -34,6 +34,8 @@
 		42B639DB15938D5100B42A2D /* page_bg@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */; };
 		42B639DC15938D5100B42A2D /* page_bg~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639D415938D5100B42A2D /* page_bg~ipad.png */; };
 		42B639E215938E5900B42A2D /* PPViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B639E015938E5900B42A2D /* PPViewController~iphone.xib */; };
+		42DF3E4D15A9F500003670E2 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DF3E4C15A9F500003670E2 /* Icon-114.png */; };
+		42DF3E5015A9F503003670E2 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 42DF3E4F15A9F503003670E2 /* Icon-57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg@2x~ipad.png"; sourceTree = "<group>"; };
 		42B639D415938D5100B42A2D /* page_bg~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg~ipad.png"; sourceTree = "<group>"; };
 		42B639E115938E5900B42A2D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/PPViewController~iphone.xib"; sourceTree = "<group>"; };
+		42DF3E4C15A9F500003670E2 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
+		42DF3E4F15A9F503003670E2 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		42523BB115793492000323EE = {
 			isa = PBXGroup;
 			children = (
+				42DF3E4F15A9F503003670E2 /* Icon-57.png */,
+				42DF3E4C15A9F500003670E2 /* Icon-114.png */,
 				423941E6157D494F0053E0FA /* Icon-144.png */,
 				423941E3157D494C0053E0FA /* Icon-72.png */,
 				42523BDD157934BF000323EE /* Pepper */,
@@ -274,6 +280,8 @@
 				42B639DC15938D5100B42A2D /* page_bg~ipad.png in Resources */,
 				42B639E215938E5900B42A2D /* PPViewController~iphone.xib in Resources */,
 				423E5CCE15A9C4D000D7AB34 /* page_bg_shadow.png in Resources */,
+				42DF3E4D15A9F500003670E2 /* Icon-114.png in Resources */,
+				42DF3E5015A9F503003670E2 /* Icon-57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
