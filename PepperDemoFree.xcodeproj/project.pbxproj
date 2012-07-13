@@ -44,13 +44,13 @@
 		423E5CCD15A9C4D000D7AB34 /* page_bg_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_bg_shadow.png; sourceTree = "<group>"; };
 		423E5CD315A9C5B200D7AB34 /* PPPageViewContentWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPageViewContentWrapper.h; sourceTree = "<group>"; };
 		423E5CD415A9C5B200D7AB34 /* PPPageViewDetailWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPageViewDetailWrapper.h; sourceTree = "<group>"; };
-		42523BBC15793492000323EE /* PepperDemoFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PepperDemoFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42523BBC15793492000323EE /* PepperDemoFreeFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PepperDemoFreeFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42523BC015793492000323EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		42523BC215793492000323EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42523BC415793492000323EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		42523BC815793492000323EE /* PepperDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PepperDemo-Info.plist"; sourceTree = "<group>"; };
+		42523BC815793492000323EE /* PepperDemoFree-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PepperDemoFree-Info.plist"; sourceTree = "<group>"; };
 		42523BCC15793492000323EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		42523BCE15793492000323EE /* PepperDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PepperDemo-Prefix.pch"; sourceTree = "<group>"; };
+		42523BCE15793492000323EE /* PepperDemoFree-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PepperDemoFree-Prefix.pch"; sourceTree = "<group>"; };
 		42523BCF15793492000323EE /* PPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPAppDelegate.h; sourceTree = "<group>"; };
 		42523BD015793492000323EE /* PPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPAppDelegate.m; sourceTree = "<group>"; };
 		42523BD615793492000323EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PPViewController.xib; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		42523BBD15793492000323EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42523BBC15793492000323EE /* PepperDemoFree.app */,
+				42523BBC15793492000323EE /* PepperDemoFreeFree.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,8 +152,8 @@
 				42523BCF15793492000323EE /* PPAppDelegate.h */,
 				42523BD015793492000323EE /* PPAppDelegate.m */,
 				42523BCC15793492000323EE /* main.m */,
-				42523BC815793492000323EE /* PepperDemo-Info.plist */,
-				42523BCE15793492000323EE /* PepperDemo-Prefix.pch */,
+				42523BC815793492000323EE /* PepperDemoFree-Info.plist */,
+				42523BCE15793492000323EE /* PepperDemoFree-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -217,9 +217,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		42523BBB15793492000323EE /* PepperDemo */ = {
+		42523BBB15793492000323EE /* PepperDemoFree */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42523BDA15793492000323EE /* Build configuration list for PBXNativeTarget "PepperDemo" */;
+			buildConfigurationList = 42523BDA15793492000323EE /* Build configuration list for PBXNativeTarget "PepperDemoFree" */;
 			buildPhases = (
 				42523BB815793492000323EE /* Sources */,
 				42523BB915793492000323EE /* Frameworks */,
@@ -229,9 +229,9 @@
 			);
 			dependencies = (
 			);
-			name = PepperDemo;
+			name = PepperDemoFree;
 			productName = PepperDemo;
-			productReference = 42523BBC15793492000323EE /* PepperDemoFree.app */;
+			productReference = 42523BBC15793492000323EE /* PepperDemoFreeFree.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +244,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "torinnguyen@gmail.com";
 			};
-			buildConfigurationList = 42523BB615793492000323EE /* Build configuration list for PBXProject "PepperDemo" */;
+			buildConfigurationList = 42523BB615793492000323EE /* Build configuration list for PBXProject "PepperDemoFree" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -256,7 +256,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42523BBB15793492000323EE /* PepperDemo */,
+				42523BBB15793492000323EE /* PepperDemoFree */,
 			);
 		};
 /* End PBXProject section */
@@ -332,7 +332,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -358,7 +357,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -378,16 +376,16 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PepperDemo/PepperDemo-Prefix.pch";
-				INFOPLIST_FILE = "PepperDemo/PepperDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				GCC_PREFIX_HEADER = "PepperDemo/PepperDemoFree-Prefix.pch";
+				INFOPLIST_FILE = "PepperDemo/PepperDemoFree-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Pepper\"",
 				);
 				"OTHER_LDFLAGS[sdk=iphoneos*]" = "\"$(SRCROOT)/Pepper/Debug-iphoneos/libPepperUI.a\"";
 				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/Pepper/Debug-iphonesimulator/libPepperUI.a\"";
-				PRODUCT_NAME = PepperDemoFree;
+				PRODUCT_NAME = PepperDemoFreeFree;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -399,16 +397,16 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PepperDemo/PepperDemo-Prefix.pch";
-				INFOPLIST_FILE = "PepperDemo/PepperDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				GCC_PREFIX_HEADER = "PepperDemo/PepperDemoFree-Prefix.pch";
+				INFOPLIST_FILE = "PepperDemo/PepperDemoFree-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Pepper\"",
 				);
 				"OTHER_LDFLAGS[sdk=iphoneos*]" = "\"$(SRCROOT)/Pepper/Debug-iphoneos/libPepperUI.a\"";
 				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/Pepper/Debug-iphonesimulator/libPepperUI.a\"";
-				PRODUCT_NAME = PepperDemoFree;
+				PRODUCT_NAME = PepperDemoFreeFree;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -418,7 +416,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		42523BB615793492000323EE /* Build configuration list for PBXProject "PepperDemo" */ = {
+		42523BB615793492000323EE /* Build configuration list for PBXProject "PepperDemoFree" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42523BD815793492000323EE /* Debug */,
@@ -427,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42523BDA15793492000323EE /* Build configuration list for PBXNativeTarget "PepperDemo" */ = {
+		42523BDA15793492000323EE /* Build configuration list for PBXNativeTarget "PepperDemoFree" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42523BDB15793492000323EE /* Debug */,

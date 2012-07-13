@@ -86,30 +86,35 @@
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didTapOnPageIndex:(int)pageIndex;
 
 /*
- * This is called when the 3D page view is being flipped
+ * This is called when the 3D/Pepper page view is being flipped
  */
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didFlippedWithIndex:(float)index;
 
 /*
- * This is called after the flipping finish snapping to a page
+ * This is called after the flipping finish snapping to 3D/Pepper page
  */
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didFinishFlippingWithIndex:(float)index;
 
 /*
- * This is called when the fullscreen list is being scrolled
+ * This is called when the fullscreen/detail list is being scrolled
  */
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didScrollWithPageIndex:(float)pageIndex;
 
 /*
- * This is called after the fullscreen list has finish snapping to a page
+ * This is called after the fullscreen/detail list has finish snapping to a page
  */
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didSnapToPageIndex:(int)pageIndex;
 
 /*
- * This is called during & after a fullscreen page is zoom
+ * This is called during & after a fullscreen/detail page is zoom
  */
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didZoomWithPageIndex:(int)pageIndex zoomScale:(float)zoomScale;
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didEndZoomingWithPageIndex:(int)pageIndex zoomScale:(float)zoomScale;
+
+/*
+ * This is called after a transition between Pepper mode & Fullscreen mode
+ */
+- (void)ppPepperViewController:(PPPepperViewController*)scrollList willOpenPageIndex:(int)pageIndex;
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didOpenPageIndex:(int)pageIndex;
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didClosePageIndex:(int)pageIndex;
 
@@ -127,16 +132,17 @@
 
 @property (nonatomic, unsafe_unretained) id <PPScrollListViewControllerDelegate> delegate;
 
-//This cannot be changed in free-to-try version
+// This cannot be changed in free-to-try version
 @property (nonatomic, unsafe_unretained) id <PPScrollListViewControllerDataSource> dataSource;
 
 // Configurable on-the-fly
 @property (nonatomic, assign) BOOL hideFirstPage;
 @property (nonatomic, assign) BOOL enableBorderlessGraphic;
 @property (nonatomic, assign) BOOL enableBookScale;
-@property (nonatomic, assign) BOOL enableBookShadow;
 @property (nonatomic, assign) BOOL enableBookRotate;
+@property (nonatomic, assign) BOOL enableBookShadow;
 @property (nonatomic, assign) BOOL enableOneSideZoom;
+@property (nonatomic, assign) BOOL enableOneSideMiddleZoom;
 @property (nonatomic, assign) BOOL enableHighSpeedScrolling;
 @property (nonatomic, assign) BOOL scaleOnDeviceRotation;
 @property (nonatomic, assign) float animationSlowmoFactor;
@@ -154,17 +160,22 @@
 
 // Book list
 - (int)getCurrentBookIndex;
+- (BOOL)hasBookInBookScrollView:(int)bookIndex;
 - (void)openCurrentBookAtPageIndex:(int)pageIndex;
-- (PPPageViewContentWrapper*)getBookViewAtIndex:(int)index;
+- (void)closeCurrentBook:(BOOL)animated;
+- (PPPageViewContentWrapper*)getBookViewAtIndex:(int)bookIndex;
 
 // Pepper list
 - (void)openPageIndex:(int)pageIndex;
-- (PPPageViewContentWrapper*)getPepperPageAtIndex:(int)index;
+- (void)closeCurrentPage:(BOOL)animated;
+- (BOOL)hasPageInPepperView:(int)index;
+- (PPPageViewContentWrapper*)getPepperPageAtIndex:(int)pageIndex;
 - (void)animateControlIndexTo:(float)index duration:(float)duration;
 
 // Page list
 - (int)getCurrentPageIndex;
+- (BOOL)hasPageInPageScrollView:(int)pageIndex;
 - (void)scrollToPage:(int)pageIndex duration:(float)duration;
-- (PPPageViewDetailWrapper*)getDetailViewAtIndex:(int)index;
+- (PPPageViewDetailWrapper*)getDetailViewAtIndex:(int)pageIndex;
 
 @end

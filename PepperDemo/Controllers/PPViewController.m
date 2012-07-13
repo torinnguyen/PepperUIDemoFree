@@ -57,6 +57,15 @@
   self.pepperViewController.delegate = self;        //we are simply printing out all delegate events in this demo
   //self.pepperViewController.dataSource = self;    //not available in free-to-try version
   
+  //Optional customization
+  /*
+   self.pepperViewController.enableBookShadow = YES;
+   self.pepperViewController.enableBorderlessGraphic = YES;
+   self.pepperViewController.enableOneSideZoom = YES;
+   self.pepperViewController.enableOneSideMiddleZoom = YES;
+   self.pepperViewController.hideFirstPage = YES;
+   */
+  
   //Default customization options
   [self onSpeedChange:self.speedSegmented];
   [self onSwitchRandomPage:self.switchRandomPage];
@@ -436,6 +445,11 @@
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didEndZoomingWithPageIndex:(int)pageIndex zoomScale:(float)zoomScale
 {
   NSLog(@"%@", [NSString stringWithFormat:@"didEndZoomingWithPageIndex:%d zoomScale:%.2f", pageIndex, zoomScale]);
+}
+
+- (void)ppPepperViewController:(PPPepperViewController*)scrollList willOpenPageIndex:(int)pageIndex
+{
+  NSLog(@"%@", [NSString stringWithFormat:@"willOpenPageIndex:%d", pageIndex]);  
 }
 
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didOpenPageIndex:(int)pageIndex

@@ -20,7 +20,7 @@
 
 - (void)setBackgroundImage:(UIImage*)image;
 - (void)unloadContent;
-- (void)reset;
+- (void)reset:(BOOL)animated;
 - (void)layoutWithFrame:(CGRect)frame duration:(float)duration;
 
 @end
