@@ -149,6 +149,7 @@
 
 /*
  * This is non-functional in free-to-try version
+ * Switch between text demo & image demo
  */
 - (IBAction)onContentChange:(id)sender
 {
