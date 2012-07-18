@@ -118,6 +118,11 @@
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didOpenPageIndex:(int)pageIndex;
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didClosePageIndex:(int)pageIndex;
 
+/*
+ * This is called when a fullscreen page is tapped
+ */
+- (void)ppPepperViewController:(PPPepperViewController*)scrollList didTapOnFullscreenPageIndex:(int)pageIndex;
+
 @end
 
 

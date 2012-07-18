@@ -463,4 +463,13 @@
   NSLog(@"%@", [NSString stringWithFormat:@"didClosePageIndex:%d", pageIndex]);
 }
 
+/*
+ * This is called when a fullscreen page is tapped
+ */
+- (void)ppPepperViewController:(PPPepperViewController*)scrollList didTapOnFullscreenPageIndex:(int)pageIndex
+{
+  NSLog(@"%@", [NSString stringWithFormat:@"didTapOnFullscreenPageIndex:%d", pageIndex]);
+}
+
+
 @end

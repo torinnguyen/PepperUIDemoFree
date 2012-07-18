@@ -7,10 +7,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class PPPageViewDetailWrapper;
+
 @protocol PPPageViewDetailDelegate
 @optional
 - (void)scrollViewDidZoom:(UIScrollView *)theScrollView;
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale;
+- (void)PPPageViewDetailWrapper:(PPPageViewDetailWrapper*)thePage viewDidTap:(int)tag;
 @end
 
 @interface PPPageViewDetailWrapper : UIScrollView <UIScrollViewDelegate>

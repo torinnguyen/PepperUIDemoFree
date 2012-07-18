@@ -28,4 +28,7 @@
 
 - (void)setBackgroundImage:(UIImage*)image;
 
+- (void)removeShadow;
+- (void)updateShadow;
+
 @end
