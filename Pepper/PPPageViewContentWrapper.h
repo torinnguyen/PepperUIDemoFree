@@ -27,7 +27,7 @@
 @property (nonatomic, assign) CGSize shadowOffset;
 
 - (void)setBackgroundImage:(UIImage*)image;
-
+- (void)unloadContent;
 - (void)removeShadow;
 - (void)updateShadow;
 
