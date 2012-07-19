@@ -26,5 +26,6 @@
 - (void)reset:(BOOL)animated;
 - (void)resetWithoutOffset:(BOOL)animated;
 - (void)layoutWithFrame:(CGRect)frame duration:(float)duration;
+- (void)setEnableScrollingZooming:(BOOL)enable;
 
 @end
