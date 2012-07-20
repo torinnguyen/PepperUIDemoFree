@@ -11,7 +11,7 @@
 #import "PPPageViewDetailWrapper.h"
 
 //For demo purpose
-#define DEMO_NUM_BOOKS               64
+#define DEMO_NUM_BOOKS               32
 #define DEMO_NUM_PAGES               100
 
 @class PPPepperViewController;
