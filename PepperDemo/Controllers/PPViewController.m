@@ -279,6 +279,14 @@
   return theBook.pages.count;
 }
 
+- (int)ppPepperViewController:(PPPepperViewController*)scrollList numberOfDetailPagesForBookIndex:(int)bookIndex
+{
+  if (bookIndex < 0 || bookIndex >= self.bookDataArray.count)
+    return 0;
+  Book *theBook = [self.bookDataArray objectAtIndex:bookIndex];
+  return theBook.pages.count;
+}
+
 - (UIView*)ppPepperViewController:(PPPepperViewController*)scrollList viewForBookIndex:(int)bookIndex withFrame:(CGRect)frame reusableView:(UIView*)contentView
 {
   Book *theBook = [self.bookDataArray objectAtIndex:bookIndex];

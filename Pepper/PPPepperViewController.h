@@ -30,6 +30,12 @@
 - (int)ppPepperViewController:(PPPepperViewController*)scrollList numberOfPagesForBookIndex:(int)bookIndex;
 
 /*
+ * Delegate to return the number of detail/fullscreen pages in the given book index
+ * This allows the last page in fullscreen mode to be unreachable
+ */
+- (int)ppPepperViewController:(PPPepperViewController*)scrollList numberOfDetailPagesForBookIndex:(int)bookIndex;
+
+/*
  * Delegate to return the book cover views
  */
 - (UIView*)ppPepperViewController:(PPPepperViewController*)scrollList viewForBookIndex:(int)bookIndex withFrame:(CGRect)frame reusableView:(UIView*)contentView;
@@ -163,13 +169,17 @@
 
 - (void)reload;
 - (BOOL)isPepperView;
+- (BOOL)isBusy;
 
 // Book list
 - (int)getCurrentBookIndex;
 - (BOOL)hasBookInBookScrollView:(int)bookIndex;
 - (void)openCurrentBookAtPageIndex:(int)pageIndex;
 - (void)closeCurrentBook:(BOOL)animated;
+- (void)snapBookScrollView;
 - (PPPageViewContentWrapper*)getBookViewAtIndex:(int)bookIndex;
+- (void)scrollToBook:(int)bookIndex animated:(BOOL)animated;
+- (void)scrollToBook:(int)bookIndex duration:(float)duration;
 
 // Pepper list
 - (void)openPageIndex:(int)pageIndex;

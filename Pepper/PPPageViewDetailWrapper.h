@@ -14,6 +14,7 @@
 - (void)scrollViewDidZoom:(UIScrollView *)theScrollView;
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(float)scale;
 - (void)PPPageViewDetailWrapper:(PPPageViewDetailWrapper*)thePage viewDidTap:(int)tag;
+- (void)PPPageViewDetailWrapper:(PPPageViewDetailWrapper*)thePage viewDidDoubleTap:(int)tag;
 @end
 
 @interface PPPageViewDetailWrapper : UIScrollView <UIScrollViewDelegate>
