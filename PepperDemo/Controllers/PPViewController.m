@@ -176,6 +176,7 @@
 - (IBAction)onContentChange:(id)sender
 {
   int idx = self.contentSegmented.selectedSegmentIndex;
+  int bookIndex = [self.pepperViewController getCurrentBookIndex];
   if (idx == 0) {
     self.pepperViewController.enableBorderlessGraphic = NO;
     self.pepperViewController.dataSource = self.pepperViewController;
@@ -186,6 +187,7 @@
   }
   [[MyImageCache sharedCached] removeAll];
   [self.pepperViewController reload];
+  [self.pepperViewController scrollToBook:bookIndex animated:NO];
 }
 
 - (IBAction)onSwitchRandomPage:(id)sender
@@ -206,8 +208,10 @@
 
 - (IBAction)onSwitchBorderlessGraphic:(id)sender
 {
+  int bookIndex = [self.pepperViewController getCurrentBookIndex];
   self.pepperViewController.enableBorderlessGraphic = self.switchBorderlessGraphic.on;
   [self.pepperViewController reload];
+  [self.pepperViewController scrollToBook:bookIndex animated:NO];
 }
 
 - (IBAction)onSwitchOneSideZoom:(id)sender
