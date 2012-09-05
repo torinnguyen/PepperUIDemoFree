@@ -1,6 +1,5 @@
 //
 //  PPScrollListViewControllerViewController.h
-//  pepper
 //
 //  Created by Torin Nguyen on 25/4/12.
 //  Copyright (c) 2012 torinnguyen@gmail.com. All rights reserved.
@@ -10,7 +9,7 @@
 #import "PPPageViewContentWrapper.h"
 #import "PPPageViewDetailWrapper.h"
 
-//For demo purpose
+//For demo app only, don't care about this in your actual usuage
 #define DEMO_NUM_BOOKS               32
 #define DEMO_NUM_PAGES               100
 
@@ -155,6 +154,7 @@
 @property (nonatomic, assign) BOOL enableOneSideZoom;
 @property (nonatomic, assign) BOOL enableOneSideMiddleZoom;
 @property (nonatomic, assign) BOOL enablePageCurlEffect;
+@property (nonatomic, assign) BOOL enablePageFlipEffect;
 @property (nonatomic, assign) BOOL enableHighSpeedScrolling;
 @property (nonatomic, assign) BOOL scaleOnDeviceRotation;
 @property (nonatomic, assign) float animationSlowmoFactor;

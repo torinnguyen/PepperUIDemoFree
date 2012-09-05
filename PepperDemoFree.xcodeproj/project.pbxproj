@@ -40,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4206824315F793CE001A28E8 /* PPPageFlipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPageFlipView.h; sourceTree = "<group>"; };
 		423941E3157D494C0053E0FA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		423941E6157D494F0053E0FA /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
 		423E5CCD15A9C4D000D7AB34 /* page_bg_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_bg_shadow.png; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 				42B639D215938D5100B42A2D /* page_bg@2x.png */,
 				42B639D315938D5100B42A2D /* page_bg@2x~ipad.png */,
 				42B639D415938D5100B42A2D /* page_bg~ipad.png */,
+				4206824315F793CE001A28E8 /* PPPageFlipView.h */,
 				423E5CD315A9C5B200D7AB34 /* PPPageViewContentWrapper.h */,
 				423E5CD415A9C5B200D7AB34 /* PPPageViewDetailWrapper.h */,
 				42523BE4157934BF000323EE /* PPPepperViewController.h */,
