@@ -25,6 +25,7 @@
 @property (nonatomic, strong) IBOutlet UISwitch * switchOneSideZoom;
 @property (nonatomic, strong) IBOutlet UILabel * lblSpeed;
 @property (nonatomic, strong) IBOutlet UILabel * lblVersion;
+@property (nonatomic, strong) IBOutlet UIButton * btnClose;
 
 @property (nonatomic, strong) PPPepperViewController * pepperViewController;
 @property (nonatomic, strong) NSMutableArray *bookDataArray;
@@ -43,6 +44,7 @@
 @synthesize switchOneSideZoom;
 @synthesize lblSpeed;
 @synthesize lblVersion;
+@synthesize btnClose;
 
 @synthesize pepperViewController;
 @synthesize bookDataArray;
@@ -93,6 +95,9 @@
   //Bring our top level menu to highest z-index
   [self.view bringSubviewToFront:self.menuView];
   [self.view bringSubviewToFront:self.speedView];
+  
+  //Hide close button initially
+  [self showHideCloseButton:NO];
   
   //Initialize data
   [self initializeBookData];
@@ -243,6 +248,54 @@
 {
   self.pepperViewController.enableOneSideZoom = self.switchOneSideZoom.on;
 }
+
+- (IBAction)onBtnClose:(id)sender
+{
+  if ([self.pepperViewController isBusy])
+    return;
+  
+  if (self.pepperViewController.isBookView)
+    return;
+  
+  if ([self.pepperViewController isPepperView]) {
+    [self.pepperViewController closeCurrentBook:YES];
+    return;
+  }
+  
+  if (self.pepperViewController.isDetailView) {
+    [self.pepperViewController closeCurrentPage:YES];
+    return;
+  }
+}
+
+#pragma mark - Helpers
+
+- (void)showHideMenuBarWithAlpha:(float)alpha
+{
+  //Show our menu together with the books
+  self.menuView.alpha = alpha;
+  self.speedView.alpha = 1.0 - alpha;
+  self.lblSpeed.text = [NSString stringWithFormat:@"%.1fx", self.pepperViewController.animationSlowmoFactor];
+  self.menuView.userInteractionEnabled = (alpha != 0);
+}
+
+- (void)showHideMenuBar:(BOOL)isShow
+{
+  [UIView animateWithDuration:0.3 animations:^{
+    [self showHideMenuBarWithAlpha:isShow ? 1.0 : 0];
+  }];
+}
+
+- (void)showHideCloseButton:(BOOL)isShow
+{
+  [UIView animateWithDuration:0.3 animations:^{
+    self.btnClose.alpha = isShow ? 1 : 0;
+  }];
+  
+  self.btnClose.userInteractionEnabled = isShow;
+  [self.view bringSubviewToFront:self.btnClose];
+}
+
 
 #pragma mark - Data model
 #pragma mark Non-functional in free-to-try version
@@ -404,6 +457,10 @@
   
   //This is mandatory in version 1.3.0 and above
   [scrollList openCurrentBookAtPageIndex:pageIndex];
+  
+  //Hide menu bar, show Close button
+  [self showHideMenuBar:NO];
+  [self showHideCloseButton:YES];
 }
 
 /*
@@ -414,11 +471,7 @@
   NSLog(@"%@", [NSString stringWithFormat:@"willOpenBookIndex:%d duration:%.2f", bookIndex, duration]);
   
   //Hide our menu together with the books
-  self.menuView.userInteractionEnabled = NO;
-  [UIView animateWithDuration:duration animations:^{
-    self.menuView.alpha = 0;
-    self.speedView.alpha = 1;
-  }];
+  [self showHideMenuBar:NO];
 }
 
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didOpenBookIndex:(int)bookIndex atPageIndex:(int)pageIndex
@@ -428,7 +481,11 @@
 
 - (void)ppPepperViewController:(PPPepperViewController*)scrollList didCloseBookIndex:(int)bookIndex
 {
-  NSLog(@"%@", [NSString stringWithFormat:@"didCloseBookIndex:%d", bookIndex]); 
+  NSLog(@"%@", [NSString stringWithFormat:@"didCloseBookIndex:%d", bookIndex]);
+  
+  //Show menu bar, hide Close button
+  [self showHideMenuBar:YES];
+  [self showHideCloseButton:NO];
 }
 
 /*
@@ -439,11 +496,7 @@
   //Commented out for performance reason
   //NSLog(@"%@", [NSString stringWithFormat:@"closingBookWithAlpha:%.2f", alpha]);
   
-  //Show our menu together with the books
-  self.menuView.alpha = alpha;
-  self.speedView.alpha = 1.0 - alpha;
-  self.lblSpeed.text = [NSString stringWithFormat:@"%.1fx", self.pepperViewController.animationSlowmoFactor];
-  self.menuView.userInteractionEnabled = (alpha != 0);
+  [self showHideMenuBarWithAlpha:alpha];
 }
 
 /*
