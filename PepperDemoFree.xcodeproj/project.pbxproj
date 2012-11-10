@@ -27,6 +27,7 @@
 		428FAA071592D990009942A2 /* MyPageBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FAA001592D990009942A2 /* MyPageBaseView.m */; };
 		428FAA081592D990009942A2 /* MyPageViewDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 428FAA021592D990009942A2 /* MyPageViewDetail.m */; };
 		42AB47BD157B77B50001AE94 /* book_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 42AB47BC157B77B50001AE94 /* book_bg.png */; };
+		42B1138F164E35640027E62A /* libPepperUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B1138E164E35640027E62A /* libPepperUI.a */; };
 		42B639D515938D5100B42A2D /* page_bg_borderless.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639CD15938D5100B42A2D /* page_bg_borderless.png */; };
 		42B639D615938D5100B42A2D /* page_bg_borderless@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639CE15938D5100B42A2D /* page_bg_borderless@2x.png */; };
 		42B639D715938D5100B42A2D /* page_bg_borderless@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B639CF15938D5100B42A2D /* page_bg_borderless@2x~ipad.png */; };
@@ -77,6 +78,7 @@
 		428FAA021592D990009942A2 /* MyPageViewDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageViewDetail.m; sourceTree = "<group>"; };
 		428FAA0F1592DE80009942A2 /* PPPepperContants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPPepperContants.h; sourceTree = "<group>"; };
 		42AB47BC157B77B50001AE94 /* book_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book_bg.png; sourceTree = "<group>"; };
+		42B1138E164E35640027E62A /* libPepperUI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPepperUI.a; sourceTree = "<group>"; };
 		42B639CD15938D5100B42A2D /* page_bg_borderless.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page_bg_borderless.png; sourceTree = "<group>"; };
 		42B639CE15938D5100B42A2D /* page_bg_borderless@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg_borderless@2x.png"; sourceTree = "<group>"; };
 		42B639CF15938D5100B42A2D /* page_bg_borderless@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "page_bg_borderless@2x~ipad.png"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				42523BC115793492000323EE /* UIKit.framework in Frameworks */,
 				42523BC315793492000323EE /* Foundation.framework in Frameworks */,
 				42523BC515793492000323EE /* CoreGraphics.framework in Frameworks */,
+				42B1138F164E35640027E62A /* libPepperUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +170,7 @@
 		42523BDD157934BF000323EE /* Pepper */ = {
 			isa = PBXGroup;
 			children = (
+				42B1138E164E35640027E62A /* libPepperUI.a */,
 				42AB47BC157B77B50001AE94 /* book_bg.png */,
 				424ED53F15B07A5A00E65A7E /* book_bg~ipad.png */,
 				423E5CCD15A9C4D000D7AB34 /* page_bg_shadow.png */,
@@ -393,8 +397,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Pepper\"",
 				);
-				"OTHER_LDFLAGS[sdk=iphoneos*]" = "\"$(SRCROOT)/Pepper/Debug-iphoneos/libPepperUI.a\"";
-				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/Pepper/Debug-iphonesimulator/libPepperUI.a\"";
 				PRODUCT_NAME = PepperDemoFreeFree;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -414,8 +416,6 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Pepper\"",
 				);
-				"OTHER_LDFLAGS[sdk=iphoneos*]" = "\"$(SRCROOT)/Pepper/Debug-iphoneos/libPepperUI.a\"";
-				"OTHER_LDFLAGS[sdk=iphonesimulator*]" = "\"$(SRCROOT)/Pepper/Debug-iphonesimulator/libPepperUI.a\"";
 				PRODUCT_NAME = PepperDemoFreeFree;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
